@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.microservice.student.studentservice.response.AddressResponse;
 
 
-@FeignClient(url="${address.service.url}", value="address-feign-client", path="/api/address")
+//@FeignClient(url="${address.service.url}", value="address-feign-client", path="/api/address")
+@FeignClient( value="address-service", path="/api/address")
 public interface AddressFeignClient {
 	
 //	@PostMapping("/service")
